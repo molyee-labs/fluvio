@@ -610,7 +610,7 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 name = "check-crate-version"
 version = "0.0.0"
 dependencies = [
- "clap",
+ "clap 4.0.9",
  "flate2",
  "reqwest",
  "semver 1.0.13",
@@ -639,19 +639,29 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "3.2.20"
+version = "3.2.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23b71c3ce99b7611011217b366d923f1d0a7e07a92bb2dbf1e84508c673ca3bd"
+checksum = "86447ad904c7fb335a790c9d7fe3d0d971dc523b8ccd1561a520de9a85302750"
+dependencies = [
+ "bitflags",
+ "clap_lex 0.2.4",
+ "indexmap",
+ "textwrap",
+]
+
+[[package]]
+name = "clap"
+version = "4.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "30607dd93c420c6f1f80b544be522a0238a7db35e6a12968d28910983fee0df0"
 dependencies = [
  "atty",
  "bitflags",
  "clap_derive",
- "clap_lex",
- "indexmap",
+ "clap_lex 0.3.0",
  "once_cell",
  "strsim",
  "termcolor",
- "textwrap",
 ]
 
 [[package]]
@@ -660,14 +670,14 @@ version = "3.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e4179da71abd56c26b54dd0c248cc081c1f43b0a1a7e8448e28e57a29baa993d"
 dependencies = [
- "clap",
+ "clap 3.2.22",
 ]
 
 [[package]]
 name = "clap_derive"
-version = "3.2.18"
+version = "4.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ea0c8bce528c4be4da13ea6fead8965e95b6073585a2f05204bd8f4119f82a65"
+checksum = "a4a307492e1a34939f79d3b6b9650bd2b971513cd775436bf2b78defeb5af00b"
 dependencies = [
  "heck",
  "proc-macro-error",
@@ -681,6 +691,15 @@ name = "clap_lex"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2850f2f5a82cbf437dd5af4d49848fbdfc27c157c3d010345776f952765261c5"
+dependencies = [
+ "os_str_bytes",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d4198f73e42b4936b35b5bb248d81d2b595ecb170da0bac7655c54eedfa8da8"
 dependencies = [
  "os_str_bytes",
 ]
@@ -1507,7 +1526,7 @@ name = "fluvio-channel"
 version = "0.0.0"
 dependencies = [
  "cfg-if",
- "clap",
+ "clap 4.0.9",
  "color-eyre",
  "dirs",
  "fluvio-types",
@@ -1524,7 +1543,7 @@ version = "0.0.0"
 dependencies = [
  "assert_cmd",
  "cfg-if",
- "clap",
+ "clap 4.0.9",
  "color-eyre",
  "colored",
  "dirs",
@@ -1545,7 +1564,7 @@ dependencies = [
  "async-trait",
  "atty",
  "bytesize",
- "clap",
+ "clap 4.0.9",
  "clap_complete",
  "color-eyre",
  "colored",
@@ -1625,7 +1644,7 @@ dependencies = [
  "async-channel",
  "async-trait",
  "chrono",
- "clap",
+ "clap 4.0.9",
  "color-eyre",
  "colored",
  "comfy-table",
@@ -1725,7 +1744,7 @@ name = "fluvio-extension-common"
 version = "0.9.0"
 dependencies = [
  "async-trait",
- "clap",
+ "clap 4.0.9",
  "comfy-table",
  "fluvio",
  "fluvio-package-index",
@@ -1858,7 +1877,7 @@ dependencies = [
 name = "fluvio-run"
 version = "0.0.0"
 dependencies = [
- "clap",
+ "clap 4.0.9",
  "fluvio-extension-common",
  "fluvio-future 0.4.2",
  "fluvio-sc",
@@ -1879,7 +1898,7 @@ dependencies = [
  "async-trait",
  "base64",
  "cfg-if",
- "clap",
+ "clap 4.0.9",
  "event-listener",
  "fluvio-auth",
  "fluvio-controlplane",
@@ -2033,7 +2052,7 @@ dependencies = [
  "async-trait",
  "bytes 1.2.1",
  "cfg-if",
- "clap",
+ "clap 4.0.9",
  "derive_builder",
  "event-listener",
  "flate2",
@@ -2094,7 +2113,7 @@ dependencies = [
  "async-trait",
  "blocking",
  "bytes 1.2.1",
- "clap",
+ "clap 4.0.9",
  "derive_builder",
  "fluvio-controlplane-metadata",
  "fluvio-future 0.4.2",
@@ -2158,7 +2177,7 @@ dependencies = [
  "async-std",
  "async-trait",
  "bytes 1.2.1",
- "clap",
+ "clap 4.0.9",
  "comfy-table",
  "crc",
  "crossbeam-channel",
@@ -2206,7 +2225,7 @@ dependencies = [
 name = "fluvio-test-derive"
 version = "0.0.0"
 dependencies = [
- "clap",
+ "clap 4.0.9",
  "crossbeam-channel",
  "fluvio",
  "fluvio-future 0.4.2",
@@ -2241,7 +2260,7 @@ version = "0.0.0"
 dependencies = [
  "async-trait",
  "bytes 1.2.1",
- "clap",
+ "clap 4.0.9",
  "comfy-table",
  "dyn-clone",
  "fluvio",
@@ -4554,9 +4573,9 @@ checksum = "507e9898683b6c43a9aa55b64259b721b52ba226e0f3779137e50ad114a4c90b"
 
 [[package]]
 name = "textwrap"
-version = "0.15.0"
+version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1141d4d61095b28419e22cb0bbf02755f5e54e0526f97f1e3d1d160e60885fb"
+checksum = "949517c0cf1bf4ee812e2e07e08ab448e3ae0d23472aee8a06c985f0c8815b16"
 
 [[package]]
 name = "thiserror"
